@@ -1,5 +1,6 @@
 var React = require('react');
 var axios = require('axios');
+var Query = require('./Query.js')
 
 var Results = React.createClass({
 	getInitialState: function(){
@@ -10,7 +11,7 @@ var Results = React.createClass({
 	componentDidMount: function(){
 		console.log("MOUNTED");
 
-		var term = "syria";
+		var term = "Mets"; ///this needs to be the input of the Query form.
 		axios.get("https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=89ee936f34114daaa9a50758983cbc2c&q=" + term)
 			.then(function(results){
 				console.log(results);
