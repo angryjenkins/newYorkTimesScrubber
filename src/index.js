@@ -1,3 +1,5 @@
-let msg = 'HELLO from INDEX.JS MNM!';
+import React from 'react';
+import {render} from 'react-dom';
+import App from 'components/app';
 
-console.log(msg);
+render(<App />, document.getElementById('app'))
